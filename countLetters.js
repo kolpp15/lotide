@@ -10,10 +10,10 @@ const countLetters = (sentence) => {
   let result = {};
 
   // first get rid of the spaces
-  let separatedSentence = sentence.split(' ').join('');
+  let noSpace = sentence.split(' ').join('');
 
   // loop through sentence
-  for (const letter of separatedSentence) {
+  for (const letter of noSpace) {
     // check if letter exists
     if (result[letter]) {
       result[letter] += 1;
