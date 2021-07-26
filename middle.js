@@ -1,24 +1,5 @@
-const eqArrays = (arrayOne, arrayTwo) => {
+const assertArraysEqual = require('./assertArraysEqual');
 
-  if (arrayOne.length !== arrayTwo.length) {
-    return false;
-  }
-
-  for (let i = 0; i < arrayOne.length; i++) {
-    if (arrayOne[i] !== arrayTwo[i]) {
-      return false;
-    }
-  }
-  return true;
-};
-
-const assertArraysEqual = (actual, expected) => {
-  if (eqArrays(actual, expected)) {
-    console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
 
 // return middle array
 // return always one(odd) or two(even) elements
@@ -39,11 +20,4 @@ const middle = (array) => {
   return midArray;
 };
 
-
-assertArraysEqual(middle([1]),[]);
-assertArraysEqual(middle([1, 2]),[]);
-assertArraysEqual(middle([1, 2, 3]),[2]);
-assertArraysEqual(middle([1, 2, 3, 4]),[2, 3]);
-assertArraysEqual(middle([1, 2, 3, 4, 5]),[3]);
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6]),[3, 4]);
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6, 7]),[4]);
+module.exports = middle;
