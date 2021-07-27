@@ -36,6 +36,8 @@ The following functions are currently implemented:
   - input: array 
   - output: middle element(s) 
     - Even number returns 2, Odd number returns 1
+* `flatten(...)` : 
+  - flattening a nested array
 * `countLetters(...)` : 
   - input: sentence or string 
   - output: in an object, returns a count of each of the letters
